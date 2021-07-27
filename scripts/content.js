@@ -62,6 +62,13 @@ function getHiddenItemsFromStorage() {
 }
 
 function showHiddenItemsDialog(items) {
+
+    // Открыт?
+    if ($('.x-vc-dialog').length > 0) {
+        closeHiddenItemsDialog();
+        return;
+    }
+
     //chrome.storage.local.clear();
     let itemsHtml = '';
     if (items.length > 0) {
