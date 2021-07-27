@@ -1,0 +1,25 @@
+{
+    "name": "Икс для VC",
+    "short_name": "Икс для VC",
+    "version": "1.0",
+    "description": "Поможет скрыть неинтересные посты на vc.ru",
+    "permissions": [ "storage" ],
+    "content_scripts": [
+        {
+            "matches": [ "*://vc.ru/*" ],
+            "js": [ 
+                "scripts/jquery-3.6.0.min.js", 
+                "scripts/content.js",
+                "scripts/common/storageHelper.js"
+            ],
+            "css": [ "styles/ext.css" ],
+            "run_at": "document_end"
+        }
+    ],  
+    "icons": {
+        "16": "images/img16.png",
+        "128": "images/img128.png"
+    },           
+    "web_accessible_resources": ["images/*.png"],
+    "manifest_version": 2
+}

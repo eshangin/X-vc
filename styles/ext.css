@@ -1,0 +1,119 @@
+.content-header__item--controls {
+    position: relative
+}
+
+.x-vc-rm-item-btn {
+    width: 20px;
+    padding: 0;
+    border: 0;
+    background: #fff;
+    font-weight: normal;
+    color: #595959;;
+    z-index: 10000000;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    height: 1.5rem;
+    position: absolute;
+    right: 24px;
+    top: -1px;
+    align-items: center;
+}
+
+.x-vc-rm-item-btn:hover {
+    color: #000;
+}
+
+.x-vc-dialog {
+    z-index: 10000000000;
+    position: fixed;
+    top: 50px;
+    width: 500px;
+    border: 5px solid #9ec5fe;
+    background-clip: padding-box;
+    border-radius: .3rem;
+    padding: 3em;
+    margin: 0 auto;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;    
+}
+
+.x-vc-dialog__close-btn {
+    padding: 0;
+    top: 10px;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border: 0;
+    background: transparent;
+    font-weight: normal;
+    color: #595959;
+    font-size: 30px;
+    z-index: 10000000;
+    cursor: pointer;
+    position: absolute;
+    outline: none;
+}
+
+.x-vc-dialog__title {
+    font-size: 1.5rem;
+}
+
+.x-vc-hidden-item-list {
+    max-height: 460px;
+    overflow: auto;
+    position: relative;
+    min-height: 30px;
+}
+
+.x-vc-hidden-item-list__no-items-msg {
+    position: absolute;
+    z-index: 1;
+    padding: 7px 0;
+}
+
+.x-vc-hidden-item {
+    padding: 7px 0;
+    position: relative;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.x-vc-hidden-item__title-container {
+    padding-right: 15px;
+}
+
+.x-vc-hidden-item__restore-btn {
+    position: absolute;
+    right: 0;
+    display: none;
+    background-color: #fff;
+    border: 0;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.x-vc-hidden-item:hover .x-vc-hidden-item__restore-btn {
+    display: block;
+}
+
+.x-vc-text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.x-vc-d-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+
+.x-vc-align-items-center {
+    -ms-flex-align: center!important;
+    align-items: center!important;
+}
+
+[data-x-vc-hidden-post] {
+    display: none !important;
+}
