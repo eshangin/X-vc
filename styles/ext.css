@@ -24,6 +24,12 @@
     color: #000;
 }
 
+.x-vc-sidebar-item-text {
+    background: -3px center / 22px no-repeat url("chrome-extension://__MSG_@@extension_id__/images/sidebar-icon.png");
+    padding-left: 30px;
+    margin-left: -30px;
+}
+
 .x-vc-dialog {
     z-index: 10000000000;
     position: fixed;

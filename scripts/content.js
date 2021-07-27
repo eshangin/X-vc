@@ -28,9 +28,12 @@ function tryInjectHiddenListItemBtn(tryNumber) {
 }
 
 function injectHiddenListItemsBtn($topSidebarList) {
-    let $sidebarItem = $topSidebarList.find('.sidebar-tree-list-item:first').clone();
-    $sidebarItem.find('svg').replaceWith(`<img style="margin-right: 12px" src="${chrome.runtime.getURL('images/sidebar-icon.png')}" />`);
-    $sidebarItem.find('.sidebar-tree-list-item__name').text('Скрытые');
+    let $sidebarItem = $topSidebarList.find('.sidebar-tree-list-item:first')
+        .clone()
+        .removeClass('sidebar-tree-list-item--active');
+    $sidebarItem.find('svg').css('visibility', 'hidden');
+    $sidebarItem.find('.sidebar-tree-list-item__child-item').remove();
+    $sidebarItem.find('.sidebar-tree-list-item__name').text('Скрытые').addClass('x-vc-sidebar-item-text');
     $sidebarItem.addClass(YA_METRIKA_DISABLE_CLICKMAP_CLASS).removeAttr('href').removeAttr('data-gtm');
     $sidebarItem.find('a').removeAttr('href').click(function (event) {
         event.preventDefault();
