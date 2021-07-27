@@ -170,10 +170,14 @@ function postMonitor() {
 
 function injectHideFeedItemBtn() {
     getFeedItemsWithoutXButton().each(function () {
-        $(this)
+        let $header = $(this)
             .attr('data-x-vc-feed-item', '')
-            .find('.content-header__item--controls')
-            .prepend(buildHideBtn());
+            .find('.content-header');
+        let $directHeaderItem = $header.find('> .content-header__item:first');
+        let $rmBtn = buildHideBtn();
+        $directHeaderItem.length > 0
+            ? $directHeaderItem.before($rmBtn)
+            : $header.append($rmBtn.addClass('x-vc-rm-item-btn_alone'));
     });
 }
 
